@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+
 import * as actions from '../../store/actions/index';
 
 class Example extends Component {
@@ -9,8 +11,10 @@ class Example extends Component {
 				<p>Current name: {this.props.name}</p>
 				<p>Current age: {this.props.age}</p>
 				<p>Is {this.props.name} human ?: {(this.props.isHuman) ? "Yes" : "No"}</p>
-				<button onClick={() => this.props.onSetName('Tiit')}>Set Name To "Tiit"</button>
-				<button onClick={() => this.props.onSetName('Priit')}>Set Name To "Priit"</button>
+				<Button color="primary" variant="outlined" onClick={() => this.props.onSetName('Tiit')}>Set Name To
+					"Tiit"</Button>
+				<Button color="secondary" variant="outlined" onClick={() => this.props.onSetName('Priit')}>Set Name To
+					"Priit"</Button>
 			</div>
 		)
 	}
