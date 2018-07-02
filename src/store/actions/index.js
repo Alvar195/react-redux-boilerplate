@@ -1,3 +1,3 @@
 export {
-  setName
+	setName
 } from './example'
